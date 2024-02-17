@@ -7,12 +7,12 @@ let noteList = JSON.parse(localStorage.getItem("notes") || "[]");
 
 // Menambahkan note
 function addNote() {
-    const createArticle = document.createElement("article");
-    createArticle.innerHTML = `
+  const createArticle = document.createElement("article");
+  createArticle.innerHTML = `
       <p class='text' contenteditable="true"></p>
       <p class='tanggal'>Tanggal :</p>
       `;
-    main.appendChild(createArticle)
+  main.appendChild(createArticle);
 }
 // Menyimpan Data ke local storage
 function saveNote(e) {
@@ -37,9 +37,9 @@ function saveNote(e) {
       <p class='text' contenteditable="true">${note.noteText}</p>
       <p class='tanggal'>Tanggal : ${note.tanggal}</p>
       `;
-    main.appendChild(createArticle)
-  }
-)})();
+    main.appendChild(createArticle);
+  });
+})();
 
 addDoneButton.addEventListener("click", saveNote);
 addNoteButton.addEventListener("click", addNote);
